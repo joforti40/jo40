@@ -27,7 +27,7 @@ export default function WriteupDetail() {
         </div>
 
         {/* Notepad body */}
-        <div className="bg-black text-green-400 font-mono p-6 space-y-4 text-lg">
+        <div className="bg-black text-green-400 font-mono p-4 sm:p-6 space-y-3 sm:space-y-4 text-sm sm:text-lg leading-relaxed">
           {!writeup ? (
             <>
               <p>C:\Users\jo40&gt; type writeups\{slug}.txt</p>

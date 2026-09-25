@@ -17,7 +17,7 @@ export default function App() {
 
   const ErrorBox = ({ top, left }) => (
     <div
-      className="absolute w-[300px] border border-[#0a2f7a] bg-[#ece9d8] shadow-xl overflow-hidden"
+      className="absolute hidden md:block w-[300px] border border-[#0a2f7a] bg-[#ece9d8] shadow-xl overflow-hidden"
       style={{ top, left }}
     >
       <div className="flex items-center justify-between bg-[linear-gradient(to_bottom,#2a7fff,#0b59d8)] px-2 py-1 text-white text-sm">
@@ -61,7 +61,7 @@ export default function App() {
         <ErrorBox key={index} top={popup.top} left={popup.left} />
       ))}
 
-      <div className="absolute top-[2%] left-[1%] w-[300px] border border-[#0a2f7a] bg-[#ece9d8] shadow-xl overflow-hidden">
+      <div className="absolute top-[2%] left-[1%] w-[300px] hidden md:block border border-[#0a2f7a] bg-[#ece9d8] shadow-xl overflow-hidden">
         <div className="flex items-center justify-between bg-[linear-gradient(to_bottom,#2a7fff,#0b59d8)] px-2 py-1 text-white text-sm">
           <span>Local Disk (C:)</span>
           <div className="w-4 h-4 bg-red-500 text-white text-center text-xs">X</div>
@@ -78,7 +78,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="absolute bottom-[6%] left-[4%] w-[300px] border border-[#0a2f7a] bg-[#ece9d8] shadow-xl overflow-hidden">
+      <div className="absolute bottom-[6%] left-[4%] w-[300px] hidden md:block border border-[#0a2f7a] bg-[#ece9d8] shadow-xl overflow-hidden">
         <div className="flex items-center justify-between bg-[linear-gradient(to_bottom,#2a7fff,#0b59d8)] px-2 py-1 text-white text-sm">
           <span>Local Disk (C:)</span>
           <div className="w-4 h-4 bg-red-500 text-white text-center text-xs">X</div>
@@ -95,7 +95,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="w-[650px] shadow-2xl border border-gray-400 relative z-10">
+      <div className="w-[650px] max-w-[90vw] shadow-2xl border border-gray-400 relative z-10">
         <div className="bg-blue-600 text-white px-3 py-1 flex justify-between items-center text-sm">
           <span>C:\WINDOWS\system32\cmd.exe</span>
 
@@ -106,7 +106,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="bg-black text-green-400 font-mono p-6 space-y-5 text-lg leading=">
+        <div className="bg-black text-green-400 font-mono p-4 sm:p-6 space-y-4 sm:space-y-5 text-sm sm:text-lg leading-relaxed">
           <p>C:\Users\jo40&gt; whoami</p>
           <p className="ml-4 text-white">jo40</p>
 
@@ -115,7 +115,7 @@ export default function App() {
 
           <p>C:\Users\jo40&gt; links</p>
 
-          <div className="ml-4 flex gap-6 underline">
+          <div className="ml-4 flex flex-wrap gap-4 sm:gap-6 underline">
             {links.map((link) =>
               link.external ? (
                 <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
